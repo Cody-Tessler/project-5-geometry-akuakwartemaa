@@ -4,7 +4,9 @@ from math import sqrt
 class Pentagon(Shape):
 
     def __init__(self, a):
-        self.a=a
+        if a <= 0:
+            raise ValueError("Pentagon side length must be positive")
+        self.a = a
         ...
 
     def get_area(self):
