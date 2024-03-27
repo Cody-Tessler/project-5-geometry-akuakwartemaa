@@ -1,5 +1,7 @@
 import unittest
 import math
+import sys
+sys.path.insert(0, './')
 from os import listdir
 
 from circle import Circle

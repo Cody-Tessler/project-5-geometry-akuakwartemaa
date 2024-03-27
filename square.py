@@ -10,15 +10,18 @@ from rectangle import Rectangle
 class Square(Rectangle):
 
     def __init__(self, a):
+        super().__init__(a, a)
         ...
 
     def __str__(self):
-        return "TODO"
+        return (f"Square with side {self.length:.2f}, Area: {self.get_area():.2f}, "
+                f"Perimeter: {self.get_perimeter():.2f}")
+
 
     @classmethod
     def get_area_formula(cls):
-        return "TODO"
+        return "side^2"
 
     @classmethod
     def get_perimeter_formula(cls):
-        return "TODO"
+        return "4 * side"
